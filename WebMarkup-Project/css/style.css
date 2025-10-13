@@ -1,0 +1,379 @@
+/* === Base === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* === Header === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content closer to left */
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex: 0 1 auto;
+}
+
+.logo {
+  width: 55px;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0 0 0 auto; /* keeps it from stretching off screen */
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: #bbf5cf;
+}
+
+/* === Hero === */
+.hero {
+  margin-top: 6rem;
+  position: relative;
+  text-align: center;
+}
+
+.hero figure {
+  margin: 0;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.hero figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(46, 125, 50, 0.75);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: #0288d1;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #01579b;
+}
+
+/* === Feature Sections === */
+.feature {
+  text-align: center;
+  margin: 5rem 0;
+  background: #f6faf8;
+  padding: 2rem 1rem;
+  border-top: 2px solid #cde8cf;
+  border-bottom: 2px solid #cde8cf;
+}
+
+.feature:nth-child(even) {
+  background: #fff;
+}
+
+.feature figure {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature img:hover {
+  transform: scale(1.02);
+}
+
+.feature h3 {
+  color: #2e7d32;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+.feature p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0.5rem auto 1rem;
+}
+
+.feature .link {
+  display: inline-block;
+  text-decoration: none;
+  color: #0288d1;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.feature .link:hover {
+  color: #01579b;
+}
+
+/* === Footer === */
+footer {
+  background: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+footer .concerns {
+  margin-top: 1rem;
+}
+
+footer label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+footer textarea {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 6px;
+  border: 1px solid #cde8cf;
+  padding: 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  resize: none;
+}
+
+footer {
+  background: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+footer .concerns {
+  margin-top: 1.5rem;
+}
+
+footer label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+footer input[type="email"],
+footer textarea {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 6px;
+  border: 1px solid #cde8cf;
+  padding: 0.6rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+footer textarea {
+  resize: none;
+}
+
+footer input[type="submit"] {
+  background: #0288d1;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+footer input[type="submit"]:hover {
+  background: #01579b;
+}
+
+
+/* === Cookies === */
+#cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.95);
+  border-top: 2px solid #2e7d32;
+  z-index: 9999;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+#cookies button {
+  background: #2e7d32;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#cookies button:hover {
+  background: #25672b;
+}
+
+/* === Responsive Navigation === */
+@media (max-width: 950px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    justify-content: center;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+  .hero img {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .feature h3 {
+    font-size: 1.6rem;
+  }
+  .feature p {
+    font-size: 1rem;
+  }
+}
+/* === Scenic Route Tables === */
+.route-info {
+  margin: 1rem auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px;
+  font-size: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.route-info th, .route-info td {
+  border: 1px solid #cde8cf;
+  padding: 0.7rem 1rem;
+  text-align: left;
+}
+
+.route-info th {
+  background: #e8f5e9;
+  color: #2e7d32;
+  width: 40%;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.route-info tr:nth-child(even) td {
+  background: #f9fdf9;
+}
+
+.route-info tr:nth-child(odd) td {
+  background: #fff;
+}
+.feature table th {
+  text-align: left;
+}
+/* === Contact Page Form === */
+fieldset {
+  border: 1px solid #cde8cf;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9fdf9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+legend {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+input[type="text"],
+textarea {
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #cde8cf;
+  border-radius: 4px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
