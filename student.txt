@@ -1,5 +1,5 @@
 Student name: Georg Henrich Operario
 Student number: 728935
 Student class: 1C
-GitHub Repository: your github repository URL
-GitHub Pages URL: your github pages URL
+GitHub Repository: https://github.com/GeorgHenrich25/WebMarkup-Project.git
+GitHub Pages URL: https://georghenrich25.github.io/WebMarkup-Project/

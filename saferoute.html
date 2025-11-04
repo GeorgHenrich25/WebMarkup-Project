@@ -20,15 +20,22 @@
     </a>
     <h1>Safe Routes</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="scenic.html">Scenic Routes</a></li>
-        <li><a href="saferoute.html" aria-current="page">Safe Routes</a></li>
-        <li><a href="tips.html">Cycling Tips</a></li>
-        <li><a href="discover.html">Discover Haarlem</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Mobile toggle (CSS-only) -->
+  <input type="checkbox" id="nav-toggle" aria-label="Open menu">
+  <label for="nav-toggle" class="hamburger" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </label>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="scenic.html">Scenic Routes</a></li>
+    <li><a href="saferoute.html" aria-current="page">Safe Routes</a></li>
+    <li><a href="tips.html">Cycling Tips</a></li>
+    <li><a href="discover.html">Discover Haarlem</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
   </header>
 
   <main>
@@ -64,7 +71,7 @@
 
     <section class="feature">
       <figure>
-        <img src="img/cycling.png" alt="Family cycling in park" title="Family Safe Route Haarlem">
+        <img src="img/view.jpg" alt="Family cycling in park" title="Family Safe Route Haarlem">
         <figcaption>
           <h3>Family Park Route</h3>
           <p>A calm, green ride around Haarlemmerhout Park — completely safe for children and families.</p>
@@ -80,7 +87,7 @@
 
     <section class="feature">
       <figure>
-        <img src="img/discover-haarlem.png" alt="Countryside cycling route near Haarlem" title="Suburban Safe Route Haarlem">
+        <img src="img/view2.jpg" alt="Countryside cycling route near Haarlem" title="Suburban Safe Route Haarlem">
         <figcaption>
           <h3>Countryside Comfort Loop</h3>
           <p>Enjoy peaceful roads and separated cycling lanes through Haarlem's outskirts.</p>
@@ -108,23 +115,37 @@
 
 
   <footer>
-    <p>&copy; 2025 Cycling Haarlem &reg; — Ride Safe &amp; Enjoy!</p>
-    <form action="contact.html" class="concerns">
-  <label for="email">If you have any concerns, contact us below or visit our <a href="contact.html">contact page</a>:</label><br>
+  <p>&copy; 2025 <strong>Cycling Haarlem</strong> &reg; — Ride Safe &amp; <em>Enjoy!</em></p>
 
-  <input type="email" id="email" name="email" placeholder="Your email address" required><br>
+  <form action="contact.html" class="concerns">
+    <label for="email">If you have any concerns, contact us below or visit our 
+      <a href="contact.html">contact page</a>:
+    </label>
 
-  <textarea id="feedback" name="feedback" rows="3" placeholder="Write your message..." required></textarea><br>
+    <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-  <input type="submit" value="Send Message">
-</form>
+    <textarea id="feedback" name="feedback" rows="3" placeholder="Write your message..." required></textarea>
 
-  </footer>
+    <input type="submit" value="Send Message">
+  </form>
+</footer>
 
  
   <aside id="cookies">
-    <p>This site uses cookies to improve your experience. <button>OK</button></p>
-  </aside>
+  <p>This site uses cookies to improve your experience. 
+    <button id="acceptCookies">OK</button>
+  </p>
+</aside>
+
+<script>
+  const cookieBanner = document.getElementById("cookies");
+  const acceptBtn = document.getElementById("acceptCookies");
+
+  acceptBtn.addEventListener("click", () => {
+    cookieBanner.style.display = "none";
+  });
+</script>
+
 
 </body>
 </html>
