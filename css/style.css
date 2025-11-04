@@ -5,18 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root{
-
   --green: #2e7d32;
   --blue:  #0288d1;
   --blue-dark:#01579b;
-
-
   --text: #222;
   --bg:   #fff;
   --muted:#f6faf8;
   --card:#f9fdf9;
   --ring:#0288d1;
-
 
   --radius: 10px;
   --space:  16px;
@@ -39,7 +35,11 @@ body{
 
 
 @media (prefers-reduced-motion: reduce){
-  *{ animation:none !important; transition:none !important; }
+  *, *::before, *::after {
+    animation: none;
+    transition: none;
+    scroll-behavior: auto;
+  }
 }
 
 header{
@@ -65,13 +65,11 @@ header h1{
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
 
-
 nav{
   margin-left:auto;
   position:relative;
   display:flex; align-items:center;
 }
-
 
 nav ul{
   list-style:none; display:flex; gap:12px;
@@ -86,7 +84,6 @@ nav a{
 }
 nav a:hover{ background:var(--blue); color:#fff; }
 nav a[aria-current="page"]{ background:var(--blue); color:#fff; }
-
 
 nav a:focus-visible,
 .hamburger:focus-visible{ outline:2px solid var(--ring); outline-offset:3px; border-radius:8px; }
@@ -143,7 +140,6 @@ nav a:focus-visible,
 .feature .link{ color:var(--blue); font-weight:600; text-decoration:none; }
 .feature .link:hover{ color:var(--blue-dark); }
 
-
 .route-info{
   margin:16px auto;
   border-collapse:collapse; width:min(600px,86vw);
@@ -194,7 +190,6 @@ footer input[type="email"], footer textarea{
   max-width:500px; margin:0 auto .8rem; display:block;
 }
 
-
 #cookies{
   position:fixed; left:0; right:0; bottom:0;
   background:rgba(255,255,255,.96);
@@ -217,25 +212,21 @@ footer input[type="submit"] {
   margin: 0.5rem auto;
 }
 
-
 /* === Accessibility helper === */
-.sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
 /* =========================
    Responsive
    ========================= */
 @media (max-width: 1000px){
-  /* Slightly shorter hero */
   .hero img{ height:72vh; }
 }
 
 @media (max-width: 950px){
-  /* Header size & title clamp */
   header{ height:var(--header-h-tablet); }
   .hero{ margin-top:calc(var(--header-h-tablet) + 10px); }
   header h1{ font-size:1.25rem; max-width:50vw; }
 
-  /* Hamburger visible, desktop menu hidden */
   .hamburger{ display:block; }
   nav ul{
     display:none;
@@ -250,10 +241,8 @@ footer input[type="submit"] {
   }
   nav a{ display:block; padding:.75rem 1rem; border-radius:10px; font-size:1rem; }
 
-  /* Toggle open */
   #nav-toggle:checked ~ ul{ display:flex; }
 
-  /* Icon morph to X */
   #nav-toggle:checked + .hamburger span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
   #nav-toggle:checked + .hamburger span:nth-child(2){ opacity:0; }
   #nav-toggle:checked + .hamburger span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
@@ -276,8 +265,8 @@ footer input[type="submit"] {
 /* =========================
    Optional utilities
    ========================= */
-.hidden{ display:none !important; }
-.mt-0{ margin-top:0 !important; }
+.hidden{ display:none; }
+.mt-0{ margin-top:0; }
 
 /* === Rubric Additions === */
 p { text-indent: 1em; word-spacing: 0.05em; }
@@ -299,4 +288,3 @@ nav > ul { margin-top: 0; }
   border-style: solid;
   border-width: 1px;
 }
-
