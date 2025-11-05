@@ -13,34 +13,32 @@
 
 <body>
 
-
   <header>
     <a href="index.html">
-      <img src="img/logo.png" alt="Cycling Haarlem logo" class="logo">
+      <img src="img/logo.png" alt="Cycling Haarlem logo" title="Cycling Haarlem" class="logo">
     </a>
     <h1>Contact</h1>
-   <nav>
-  <!-- Mobile toggle (CSS-only) -->
-  <input type="checkbox" id="nav-toggle" aria-label="Open menu">
-  <label for="nav-toggle" class="hamburger" aria-hidden="true">
-    <span></span><span></span><span></span>
-  </label>
 
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="scenic.html">Scenic Routes</a></li>
-    <li><a href="saferoute.html">Safe Routes</a></li>
-    <li><a href="tips.html">Cycling Tips</a></li>
-    <li><a href="discover.html">Discover Haarlem</a></li>
-    <li><a href="contact.html" aria-current="page">Contact</a></li>
-  </ul>
-</nav>
+    <nav>
+      <!-- Mobile toggle (CSS-only) -->
+      <input type="checkbox" id="nav-toggle" aria-label="Open menu">
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
 
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scenic.html">Scenic Routes</a></li>
+        <li><a href="saferoute.html">Safe Routes</a></li>
+        <li><a href="tips.html">Cycling Tips</a></li>
+        <li><a href="discover.html">Discover Haarlem</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
 
-  
     <section class="hero">
       <figure>
         <img src="img/discover-haarlem.png" alt="Haarlem city map" title="Contact Cycling Haarlem">
@@ -51,91 +49,86 @@
       </figure>
     </section>
 
-  
     <section class="feature">
       <form action="thankyou.html" method="get">
         <fieldset>
           <legend>Contact Form</legend>
 
           <!-- TITLE (Mr / Ms) -->
-          <label>Title:</label><br>
+          <p><strong>Title:</strong></p>
           <input type="radio" id="mr" name="title" value="mr" required>
           <label for="mr">Mr</label>
-          
           <input type="radio" id="ms" name="title" value="ms" required>
-          <label for="ms">Ms</label><br><br>
+          <label for="ms">Ms</label>
 
           <!-- NAME -->
-          <label for="name">Full Name:</label><br>
-          <input type="text" id="name" name="name" required placeholder="Your name"><br><br>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
 
           <!-- EMAIL -->
-          <label for="email">Email Address:</label><br>
-          <input type="email" id="email" name="email" required placeholder="you@example.com"><br><br>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
 
           <!-- TOPIC SELECT -->
-          <label for="topic">Topic:</label><br>
+          <label for="topic">Topic:</label>
           <select id="topic" name="topic" required>
             <option value="">Please choose…</option>
-            <option value="routes">Routes & Cycling Info</option>
-            <option value="events">Events & Activities</option>
+            <option value="routes">Routes &amp; Cycling Info</option>
+            <option value="events">Events &amp; Activities</option>
             <option value="support">Support Request</option>
             <option value="other">Other</option>
-          </select><br><br>
+          </select>
 
           <!-- MESSAGE -->
-          <label for="message">Your message:</label><br>
-          <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea><br><br>
+          <label for="message">Your message:</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
 
           <input type="submit" value="Send Message">
         </fieldset>
       </form>
     </section>
 
-  
     <section class="feature">
       <h3>Visit or Reach Us</h3>
       <address>
-        Cycling Haarlem<br>
-        Grote Markt, Haarlem, The Netherlands<br>
-        📧 Email: info@cyclinghaarlem.nl<br>
-        ☎️ Phone: +31 23 123 4567<br>
+        <p>Cycling Haarlem</p>
+        <p>Grote Markt, Haarlem, The Netherlands</p>
+        <p>📧 Email: info@cyclinghaarlem.nl</p>
+        <p>☎️ Phone: +31 23 123 4567</p>
       </address>
     </section>
 
   </main>
 
- 
- <footer>
-  <p>&copy; 2025 <strong>Cycling Haarlem</strong> &reg; — Ride Safe &amp; <em>Enjoy!</em></p>
+  <footer>
+    <p>&copy; 2025 <strong>Cycling Haarlem</strong> &reg; — Ride Safe &amp; <em>Enjoy!</em></p>
 
-  <form action="contact.html" class="concerns">
-    <label for="email">If you have any concerns, contact us below or visit our 
-      <a href="contact.html">contact page</a>:
-    </label>
+    <form action="contact.html" class="concerns">
+      <label for="email">If you have any concerns, contact us below or visit our 
+        <a href="contact.html">contact page</a>:
+      </label>
 
-    <input type="email" id="email" name="email" placeholder="Your email address" required>
+      <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-    <textarea id="feedback" name="feedback" rows="3" placeholder="Write your message..." required></textarea>
+      <textarea id="feedback" name="feedback" rows="3" placeholder="Write your message..." required></textarea>
 
-    <input type="submit" value="Send Message">
-  </form>
-</footer>
+      <input type="submit" value="Send Message">
+    </form>
+  </footer>
 
+  <aside id="cookies">
+    <p>This site uses cookies to improve your experience. 
+      <button id="acceptCookies">OK</button>
+    </p>
+  </aside>
 
- <aside id="cookies">
-  <p>This site uses cookies to improve your experience. 
-    <button id="acceptCookies">OK</button>
-  </p>
-</aside>
-<script>
-  const cookieBanner = document.getElementById("cookies");
-  const acceptBtn = document.getElementById("acceptCookies");
-
-  acceptBtn.addEventListener("click", () => {
-    cookieBanner.style.display = "none";
-  });
-</script>
+  <script>
+    const cookieBanner = document.getElementById("cookies");
+    const acceptBtn = document.getElementById("acceptCookies");
+    acceptBtn.addEventListener("click", () => {
+      cookieBanner.style.display = "none";
+    });
+  </script>
 
 </body>
 </html>
